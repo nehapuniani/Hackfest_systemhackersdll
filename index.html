@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- Declare that this page is an AngularJS application and bind the page to the fefSeed module, defined in the app.js file -->
+<html lang="en" ng-app="systemhackerdll">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SYSTEMHACKERDLL</title>
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bento-modern/bootstrap/platform-theme.min.css">
+    <link rel="stylesheet" href="bower_components/bento-modern/flexgrid/platform-theme.min.css">
+    <link rel="stylesheet" href="bower_components/bento-modern/components/platform-theme.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/systemhackerdll.css -->
+    <link rel="stylesheet" href="/styles/home.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+    <!-- Provide links to allow the user to navigate around the application via predefined application routes defined in app.js  -->
+    <div bento-off-canvas-menu="" class="not-responsive" is-expanded="expanded" is-expanded-right="expandedRight" type="push">
+        <div bento-off-canvas-menu-topbar="">
+            <div class="global-header">
+                <!-- Logo -->
+                <div class="topbar-left">
+                    <!-- Logo name or Image -->
+                    <a href="#" class="topbar-item topbar-logo">
+                        <h1>SYSTEMHACKERDLL</h1>
+                    </a>
+                </div>
+
+                <ul class="topbar-middle">
+                    <li class="topbar-item">
+                        <a href="#/home" tooltip="Home" tooltip-append-to-body="true" tooltip-placement="bottom">
+                            <i class="bento-icon-home"></i>
+                        </a>
+                    </li>
+                    <li class="topbar-item">
+                        <a href="#/tasks" tooltip="Tasks" tooltip-append-to-body="true" tooltip-placement="bottom" dropdown-toggle="">
+                            <i class="bento-icon-tasks"></i>
+                            <i class="bento-icon-caret-down"></i>
+                        </a>
+                    </li>
+                    <li class="topbar-item">
+                        <a href="#/calendar" tooltip="File Room" tooltip-append-to-body="true" tooltip-placement="bottom">
+                            <i class="bento-icon-file-room"></i>
+                        </a>
+                    </li>
+                    <li class="topbar-item">
+                        <a href="#/calendar" tooltip="Community" tooltip-append-to-body="true" tooltip-placement="bottom">
+                            <i class="bento-icon-integration"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Other CTAs -->
+                <ul class="topbar-right">
+                    <!-- Example links -->
+                    <li class="topbar-item">
+                        <a href="#/help" tooltip="Search" tooltip-append-to-body="true" tooltip-placement="bottom">
+                            <i class="bento-icon-search"></i>
+                        </a>
+                    </li>
+                    <!-- End of item -->
+                    <li class="topbar-item" dropdown="" auto-close="outsideClick">
+                        <a href="#" tooltip="My Account" tooltip-placement="bottom" dropdown-toggle="">
+                            <i class="bento-icon-user"></i>
+                            <i class="bento-icon-caret-down"></i>
+                        </a>
+
+                        <div class="dropdown-menu account-menu" role="menu">
+                            <div class="account-menu-top">
+                                <div class="account-menu-desc">
+                                    <h4 class="h2">John Doe</h4>
+
+                                    <div class="account-menu-actions">
+                                        <a href="#">View Profile</a>
+                                        <a href="#">Account Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-menu-foot">
+                                <span href="#" class="btn btn-default btn-sm">Sign out</span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End of item -->
+                </ul>
+                <!-- End of topbar-right -->
+            </div>
+            <!-- End of header -->
+        </div>
+        <!-- End of bento-off-canvas-menu-topbar -->
+
+        <div bento-off-canvas-menu-aside="">
+            <ul class="menu">
+
+                <!-- Navigate to the home route. -->
+
+                <li class="active"><a ui-sref="systemhackerdllHome">Home</a></li>
+
+
+            </ul>
+            <ul class="meta">
+                <li><h2>more</h2></li>
+                <li><a href="#/systemhackerdll/charts">Charts</a></li>
+           </ul>
+        </div>
+        <div bento-off-canvas-menu-aside-right="">Right Content Here</div>
+        <!-- End of bento-off-canvas-menu-aside -->
+
+        <div bento-off-canvas-menu-content="">
+
+            <!-- Declare the Angular viewport. This is where the selected route is displayed. -->
+            <div class="view-animate-container">
+                <div id="systemhackerdll" ui-view="" class="view-animate"></div>
+            </div>
+
+        </div><!-- bento-off-canvas-menu-content -->
+    </div><!-- bento-off-canvas-menu -->
+
+    <!-- Base JavaScript dependencies -->
+
+    <!-- build:js js/vendor.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/fef/fef.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/topojson/topojson.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/datamaps/dist/datamaps.world.js"></script>
+    <script src="bower_components/d3-geo-projection/index.js"></script>
+    <script src="bower_components/angular-agility/dist/angular-agility.min.js"></script>
+    <script src="bower_components/bento-modern/components/bento-modern.min.js"></script>
+    <!-- endbuild -->
+    
+     <!-- Wijmo CSS (required) -->
+    <link href="js/wijmo/styles/wijmo.min.css" rel="stylesheet" />
+
+    <!-- Wijmo references (required) -->
+    <script src="js/wijmo/controls/wijmo.min.js"></script>
+
+    <!-- Wijmo controls (optional, include the controls you need) -->
+    <script src="js/wijmo/controls/wijmo.grid.min.js"></script>
+    <script src="js/wijmo/controls/wijmo.grid.grouppanel.min.js"></script>
+    <script src="js/wijmo/controls/wijmo.input.min.js"></script>
+    <script src="js/wijmo/controls/wijmo.grid.filter.min.js"></script>
+
+    <!-- AngularJS and Wijmo directives (optional, use in AngularJS applications) -->
+    <script src="js/wijmo/interop/angular/wijmo.angular.min.js"></script>
+    
+	<!-- build:js systemhackerdll.js -->
+	<script src="js/app.js"></script>
+	<script src="js/systemhackerdll-temp.js"></script>
+    <script src="js/components/services/flexgrid-service.js"></script>
+    <script src="js/components/oitcharts/charts-controller.js"></script>
+    <script src="js/components/services/oitcharts-service.js"></script>
+	<!-- endbuild -->
+
+</body>
+</html>

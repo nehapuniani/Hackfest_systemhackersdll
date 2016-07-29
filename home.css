@@ -1,0 +1,12 @@
+#systemhackerdll .hidden {
+  display: none;
+}
+#systemhackerdll .popover {
+  width: 800px;
+}
+#systemhackerdll .links {
+  list-style: none;
+}
+#systemhackerdll .links li {
+  margin-top: 5px;
+}

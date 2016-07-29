@@ -1,0 +1,58 @@
+ <div id="systemhackerdll">
+ <div class="bento-container">
+  <div class="page-header">
+ <h1>Charts</h1>
+ </div>
+
+<wj-flex-grid id="chartsGrid" control="vm.flexGrid" initialized="vm.chartsGrid.init(s,e)" items-source="vm.data" class="bento-flex-grid"
+                    allow-resizing="Both" defer-resizing="true" selection-mode="Row" allow-merging="ColumnHeaders">
+        <wj-flex-grid-cell-template cell-type="RowHeader">{{$row.index+1}}</wj-flex-grid-cell-template>
+        <wj-flex-grid-column width="*" id="Wj-flex-grid-column0" header="TRC/TCC" binding="trcFormattedNumber"></wj-flex-grid-column>
+        <wj-flex-grid-column width="*" id="Wj-flex-grid-column1" header="Descriptiom" binding="trcDescription">
+                <wj-flex-grid-cell-template cell-type="Cell">
+                    <a popover-template="'popover.html'" popover-placement="right" popover-trigger="mouseenter" popover-append-to-body="true" >{{$item.trcDescription}}</a>
+        </wj-flex-grid-cell-template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column width="*" id="Wj-flex-grid-column2" header="Tax Return Types" binding="applicableTaxReturnTypes"></wj-flex-grid-column>
+</wj-flex-grid>
+
+
+ <script type="text/ng-template" id="popover.html" >
+    <div>
+        <b>Checkpoint </b <pre>
+             
+  <div>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      All
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Editorials Materials</a></li>
+          <li><a href="#">Primary Source</a></li>
+          <li><a href="#">News/Current Awarness</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Related Learning</a></li>
+        </ul>
+      </li>
+      <li><a href="#">videos</a></li>
+    </ul>
+  </div>
+
+  <div class="links">
+  <li>
+    <a href="/app/main/doc?usid=1279c8u2477dc&amp;DocID=i3c57f913b4dace50fb33dbd07eefb838&amp;docTid=T0RETGCUR%3A36967.1-1&amp;feature=tcheckpoint&amp;lastCpReqId=2257&amp;searchHandle=i0ace0d1b000001562e38023be9cae755" target="_top" class="title documentLink visited" aria-label="previously viewed 1525 (2014 Corporation) Schedule L, Line 2a. Trade notes and accounts receivable.">1525 (2014 Corporation) Schedule L, Line 2a. Trade notes and accounts receivable.</a>
+    </li>
+    <li>
+<a href="/app/main/doc?usid=1279c8u2477dc&amp;DocID=i0c6eb318e9f84c0fb8f5d0554bed88ba&amp;docTid=T0RETGCUR%3A36336.1-1&amp;feature=tcheckpoint&amp;lastCpReqId=2257&amp;searchHandle=i0ace0d1b000001562e38023be9cae755" target="_top" class="title documentLink">603 (2014 Corporation) Schedule L, Line 2a. </a>
+    </li>
+  </div>
+
+
+
+        </pre>
+      </div>
+</script>
+ </div>
+</div>

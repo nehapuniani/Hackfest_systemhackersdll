@@ -1,0 +1,6 @@
+{
+  "directory": "app/bower_components",
+  "registry" : { 
+	"search": ["http://bower.int.thomsonreuters.com", "https://bower.herokuapp.com"]
+  }
+}
